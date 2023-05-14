@@ -18,8 +18,9 @@ Two Way ngModule binding: <input
         [disabled]="!allowNewServer"
         (click) = "onServerCreation()">Add Server</button>
 
-<p>{{ serverCreateStatus }}</p>
-
+<!--<p>{{ serverCreateStatus }}</p>-->
+<p *ngIf="serverCreated"> {{ serverCreateStatus }} </p>
+<p></p>
 User Name:
 <input 
     type="text"
