@@ -19,7 +19,11 @@ Two Way ngModule binding: <input
         (click) = "onServerCreation()">Add Server</button>
 
 <!--<p>{{ serverCreateStatus }}</p>-->
-<p *ngIf="serverCreated"> {{ serverCreateStatus }} </p>
+<p *ngIf="serverCreated; else noServer"> {{ serverCreateStatus }} </p>
+<ng-template #noServer>
+    <p>Server not created !!</p>
+</ng-template>
+
 <p></p>
 User Name:
 <input 
