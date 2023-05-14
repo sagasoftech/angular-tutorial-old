@@ -19,3 +19,13 @@ Two Way ngModule binding: <input
         (click) = "onServerCreation()">Add Server</button>
 
 <p>{{ serverCreateStatus }}</p>
+
+User Name:
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)] = "userName">
+<p> {{ userName }} </p>
+<button class="btn btn-primary"
+        [disabled]="userName === ''"
+        (click)="userName = ''">Add user</button>
