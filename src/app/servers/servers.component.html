@@ -36,6 +36,5 @@ User Name:
         (click)="userName = ''">Add user</button>
 
 <p></p>
-<p>Server Statu:</p>
-<app-server></app-server>
-<app-server></app-server>
+<p>Server Status:</p>
+<app-server *ngFor="let server of servers"></app-server>
