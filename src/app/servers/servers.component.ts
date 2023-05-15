@@ -34,6 +34,6 @@ export class ServersComponent {
 
   toggleDisplay(){
     this.showSecret = !this.showSecret;
-    this.arrClicks.push(this.arrClicks.length + 1);
+    this.arrClicks.push(new Date());
   }
 }

@@ -44,7 +44,7 @@ User Name:
 <button class="btn btn-primary"
         (click)="toggleDisplay()">Display Details</button>
 <p *ngIf="showSecret">Secret Password = P@ssw@rd</p>
-<p *ngFor="let bclick of arrClicks"
-    [ngStyle]="{backgroundColor: bclick >= 5? 'blue':'transparent'}" 
-    [ngClass]="{'white-text': bclick>=5}"
+<p *ngFor="let bclick of arrClicks; let i = index"
+    [ngStyle]="{backgroundColor: i >= 5? 'blue':'transparent'}" 
+    [ngClass]="{'white-text': i>=5}"
     >Click number {{ bclick }}</p>
