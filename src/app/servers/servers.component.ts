@@ -13,6 +13,8 @@ export class ServersComponent {
   userName = '';
   serverCreated = false;
   servers = ['Server 1', 'Server 2'];
+  showSecret = false;
+  arrClicks = [];
 
   constructor(){
     setTimeout(() => {
@@ -30,4 +32,8 @@ export class ServersComponent {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
+  toggleDisplay(){
+    this.showSecret = !this.showSecret;
+    this.arrClicks.push(this.arrClicks.length + 1);
+  }
 }

@@ -38,3 +38,13 @@ User Name:
 <p></p>
 <p>Server Status:</p>
 <app-server *ngFor="let server of servers"></app-server>
+
+
+<p></p>
+<button class="btn btn-primary"
+        (click)="toggleDisplay()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = P@ssw@rd</p>
+<p *ngFor="let bclick of arrClicks"
+    [ngStyle]="{backgroundColor: bclick >= 5? 'blue':'transparent'}" 
+    [ngClass]="{'white-text': bclick>=5}"
+    >Click number {{ bclick }}</p>
